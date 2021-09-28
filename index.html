@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
   <head>
     <meta charset="utf-8" />
@@ -10,16 +6,281 @@
     <title></title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="" />
-  </head>
-  <body>
-    <!--[if lt IE 7]>
-      <p class="browsehappy">
-        You are using an <strong>outdated</strong> browser. Please
-        <a href="#">upgrade your browser</a> to improve your experience.
-      </p>
-    <![endif]-->
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400;1,500;1,600;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
 
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body class="bg-gradient-to-b from-indigo-900 via-purple-500 to-blue-300">
+    <header class="text-center w-full p-4 my-4">
+      <h1
+        class="
+          inline
+          p-4
+          font-semibold
+          italic
+          text-5xl text-white
+          border-dashed border-2 border-white
+        "
+      >
+        Fun Night In
+      </h1>
+    </header>
+
+    <p class="text-white p-4 text-center text-lg">
+      Covid got you down and you can't make adult decisions anymore? Fun Night
+      In will make that decision for you! Get a random movie and meal or pick
+      from a filter. Save your favourite combos.
+    </p>
+    <div class="flex flex-wrap">
+      <section
+        class="
+          m-2
+          w-full
+          md:flex-1
+          lg:flex-1
+          xl:flex-1
+          2xl:flex-1
+          border-solid border-4 border-white
+          rounded-lg
+        "
+      >
+        <h3
+          class="
+            w-full
+            p-2
+            text-xl
+            font-semibold
+            text-center
+            mx-auto
+            text-white
+          "
+        >
+          One less decision...
+        </h3>
+        <button
+          class="
+            hover:bg-yellow-500
+            h-24
+            inline
+            text-white
+            rounded-md
+            p-2
+            m-2
+            bg-red-600
+          "
+        >
+          Pick a random movie
+        </button>
+        <button
+          class="
+            hover:bg-yellow-500
+            h-24
+            inline
+            text-white
+            rounded-md
+            p-2
+            m-2
+            bg-red-600
+          "
+        >
+          Pick a random meal
+        </button>
+      </section>
+      <section
+        class="
+          m-2
+          flex flex-wrap
+          w-full
+          md:flex-1
+          lg:flex-1
+          xl:flex-1
+          2xl:flex-1
+          border-solid border-4 border-white
+          rounded-lg
+        "
+      >
+        <h3 class="p-2 text-xl font-semibold text-center mx-auto text-white">
+          Your fun night in begins here!
+        </h3>
+        <img
+          src="assets/images/dodgeball placeholder.jpg"
+          width="100%"
+          height="auto"
+          class="py-2 px-4 mx-auto"
+        />
+        <button
+          class="
+            -mt-12
+            mx-auto
+            hover:bg-yellow-500
+            h-10
+            inline
+            text-white
+            rounded-md
+            p-2
+            w-1/3
+            bg-red-600
+          "
+        >
+          SAVE
+        </button>
+        <img
+          src="assets/images/pizza-1327877.jpeg"
+          width="100%"
+          height="auto"
+          class="py-2 px-4 mx-auto"
+        />
+        <button
+          class="
+            -mt-12
+            mx-auto
+            hover:bg-yellow-500
+            h-10
+            inline
+            text-white
+            rounded-md
+            p-2
+            w-1/3
+            bg-red-600
+          "
+        >
+          SAVE
+        </button>
+        <div class="mx-auto text-center">
+          <h4 class="text-xl font-semibold">Pepperoni Pizza</h4>
+          <h3 class="font-semibold">Ingredients</h3>
+          <p class="py-2 px-4">
+            Praesent sapien massa, convallis a pellentesque nec, egestas non
+            nisi. Vestibulum ante ipsum primis in faucibus orci luctus et
+            ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet
+            aliquam vel, ullamcorper sit amet ligula. Nulla porttitor accumsan
+            tincidunt. Vivamus magna justo, lacinia eget consectetur sed,
+            convallis at tellus. Vestibulum ante ipsum primis in faucibus orci
+            luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor
+            sit amet aliquam vel, ullamcorper sit amet ligula.
+          </p>
+          <h3 class="font-semibold">Method</h3>
+          <p class="py-2 px-4">
+            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam
+            vel, ullamcorper sit amet ligula. Quisque velit nisi, pretium ut
+            lacinia in, elementum id enim. Vivamus magna justo, lacinia eget
+            consectetur sed, convallis at tellus. Nulla porttitor accumsan
+            tincidunt. Curabitur non nulla sit amet nisl tempus convallis quis
+            ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.
+            Vestibulum ac diam sit amet quam vehicula elementum sed sit amet
+            dui. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
+            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam
+            vel, ullamcorper sit amet ligula.
+          </p>
+        </div>
+      </section>
+      <section
+        class="
+          m-2
+          w-full
+          md:flex-1
+          lg:flex-1
+          xl:flex-1
+          2xl:flex-1
+          border-solid border-4 border-white
+          rounded-lg
+        "
+      >
+        <h3
+          class="
+            w-full
+            p-2
+            text-xl
+            font-semibold
+            text-center
+            mx-auto
+            text-white
+          "
+        >
+          Favourites
+        </h3>
+        <div
+          class="
+            text-center
+            bg-purple-500
+            h-12
+            m-2
+            rounded-lg
+            hover:bg-purple-200
+            text-white
+          "
+        >
+          <ul>
+            <li>Forrest Gump</li>
+            <li>BBQ Pork Sloppy Joes</li>
+          </ul>
+        </div>
+        <div
+          class="
+            text-center
+            bg-purple-500
+            h-12
+            m-2
+            rounded-lg
+            hover:bg-purple-200
+            text-white
+          "
+        >
+          <ul>
+            <li>Kickboxer</li>
+            <li>Kung Po Prawns</li>
+          </ul>
+        </div>
+        <div
+          class="
+            text-center
+            bg-purple-500
+            h-12
+            m-2
+            rounded-lg
+            hover:bg-purple-200
+            text-white
+          "
+        ></div>
+        <div
+          class="
+            text-center
+            bg-purple-500
+            h-12
+            m-2
+            rounded-lg
+            hover:bg-purple-200
+            text-white
+          "
+        ></div>
+        <div
+          class="
+            text-center
+            bg-purple-500
+            h-12
+            m-2
+            rounded-lg
+            hover:bg-purple-200
+            text-white
+          "
+        ></div>
+      </section>
+    </div>
+    <footer class="text-center text-blue-900 w-full h-24 mt-2">
+      <h4>This is the footer</h4>
+    </footer>
     <script src="" async defer></script>
   </body>
 </html>
