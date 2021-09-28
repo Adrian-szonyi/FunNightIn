@@ -11,6 +11,13 @@ $(function () {
   $("#rating").selectmenu();
 });
 
+
+
+// Generate random movie and meal button
+var generateBtn = document.querySelector("#generate-button");
+// Generate with filters movie and meal button
+var filterBtn = document.querySelector("filter-button");
+
 var newImage = document.querySelector("#Newimage")
 var MovieImage = document.querySelector("#Movieposter")
 async function getMovies() {
@@ -31,7 +38,7 @@ MovieImage.src = movieposter;
   getMovies() 
 
   //Array.map
-=======
+
 
 generateBtn.addEventListener("click", getRandomMeal);
 
