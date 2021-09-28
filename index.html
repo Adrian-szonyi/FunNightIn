@@ -10,14 +10,28 @@
       href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
       rel="stylesheet"
     />
+    <link
+      href="https://code.jquery.com/ui/1.13.0-rc.2/themes/smoothness/jquery-ui.css"
+      rel="stylesheet"
+    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400;1,500;1,600;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="assets/css/style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/ui/1.13.0-rc.2/jquery-ui.min.js"
+      integrity="sha256-RQLbEU539dpygNMsBGZlplus6CkitaLy0btTCHcULpI="
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body class="bg-gradient-to-b from-indigo-900 via-purple-500 to-blue-300">
     <header class="text-center w-full p-4 my-4">
@@ -66,39 +80,101 @@
         >
           One less decision...
         </h3>
-        <button
+        <div class="flex justify-center">
+          <button
+            class="
+              hover:bg-indigo-900
+              h-24
+              inline
+              text-white
+              rounded-md
+              p-2
+              m-2
+              bg-red-600
+            "
+          >
+            Pick a random movie
+          </button>
+          <button
+            class="
+              hover:bg-indigo-900
+              h-24
+              inline
+              text-white
+              rounded-md
+              p-2
+              m-2
+              bg-red-600
+            "
+          >
+            Pick a random meal
+          </button>
+        </div>
+
+        <h3
           class="
-            hover:bg-yellow-500
-            h-24
-            inline
-            text-white
-            rounded-md
+            w-full
             p-2
-            m-2
-            bg-red-600
+            text-xl
+            font-semibold
+            text-center
+            mx-auto
+            text-white
           "
         >
-          Pick a random movie
-        </button>
-        <button
-          class="
-            hover:bg-yellow-500
-            h-24
-            inline
-            text-white
-            rounded-md
-            p-2
-            m-2
-            bg-red-600
-          "
-        >
-          Pick a random meal
-        </button>
+          Not your lucky day? Pick a filter
+        </h3>
+        <div class="flex justify-center menu mb-8">
+          <form action="#">
+            <fieldset>
+              <label for="salutation">Dietary Requirements</label>
+              <select name="salutation" id="diet">
+                <option disabled selected>Please pick one</option>
+                <option>Vegetarian</option>
+                <option>Vegan</option>
+                <option>Dessert</option>
+              </select>
+              <label for="salutation">Genre</label>
+              <select name="salutation" id="genre">
+                <option disabled selected>Please pick one</option>
+                <option>Action</option>
+                <option>Comedy</option>
+                <option>Drama</option>
+                <option>Family</option>
+                <option>Romance</option>
+              </select>
+              <label for="salutation">Rating</label>
+              <select name="salutation" id="rating">
+                <option disabled selected>Please pick one</option>
+                <option>Top 250</option>
+                <option>9+</option>
+                <option>8+</option>
+                <option>7+</option>
+              </select>
+            </fieldset>
+          </form>
+        </div>
+        <div class="flex justify-center">
+          <button
+            class="
+              hover:bg-indigo-900
+              text-white
+              rounded-md
+              p-4
+              bg-red-600
+              w-1/2
+              mb-4
+            "
+          >
+            Let's go!
+          </button>
+        </div>
       </section>
       <section
         class="
           m-2
           flex flex-wrap
+          justify-center
           w-full
           md:flex-1
           lg:flex-1
@@ -108,55 +184,36 @@
           rounded-lg
         "
       >
-        <h3 class="p-2 text-xl font-semibold text-center mx-auto text-white">
+        <h3
+          class="
+            p-2
+            text-xl
+            font-semibold
+            text-center
+            mx-auto
+            text-white
+            block
+            w-full
+          "
+        >
           Your fun night in begins here!
         </h3>
         <img
           src="assets/images/dodgeball placeholder.jpg"
-          width="100%"
+          width="200px"
           height="auto"
-          class="py-2 px-4 mx-auto"
+          class="py-2 px-4 mx-auto block"
         />
-        <button
-          class="
-            -mt-12
-            mx-auto
-            hover:bg-yellow-500
-            h-10
-            inline
-            text-white
-            rounded-md
-            p-2
-            w-1/3
-            bg-red-600
-          "
-        >
-          SAVE
-        </button>
         <img
           src="assets/images/pizza-1327877.jpeg"
-          width="100%"
+          width="200px"
           height="auto"
-          class="py-2 px-4 mx-auto"
+          class="py-2 px-4 mx-auto block"
         />
-        <button
-          class="
-            -mt-12
-            mx-auto
-            hover:bg-yellow-500
-            h-10
-            inline
-            text-white
-            rounded-md
-            p-2
-            w-1/3
-            bg-red-600
-          "
-        >
-          SAVE
-        </button>
         <div class="mx-auto text-center">
-          <h4 class="text-xl font-semibold">Pepperoni Pizza</h4>
+          <h4 class="text-xl font-semibold p-2 text-2xl">
+            Dodgeball & Pepperoni Pizza
+          </h4>
           <h3 class="font-semibold">Ingredients</h3>
           <p class="py-2 px-4">
             Praesent sapien massa, convallis a pellentesque nec, egestas non
@@ -281,6 +338,6 @@
     <footer class="text-center text-blue-900 w-full h-24 mt-2">
       <h4>This is the footer</h4>
     </footer>
-    <script src="" async defer></script>
+    <script src="assets/js/script.js" async defer></script>
   </body>
 </html>
