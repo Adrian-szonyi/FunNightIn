@@ -1,0 +1,11 @@
+:root {
+  --darkblue: #003049;
+  --red: #d62828;
+  --orange: #f77f00;
+  --yellow: #fcbf49;
+  --loghtyellow: #eae2b7;
+}
+
+body {
+  font-family: "Rubik", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
