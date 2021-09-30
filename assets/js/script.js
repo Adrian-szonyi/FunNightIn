@@ -85,5 +85,5 @@ function getRandomMeal() {
 
 }
 
-}
+
 
