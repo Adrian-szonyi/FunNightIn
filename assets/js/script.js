@@ -45,6 +45,16 @@ async function getMovies() {
     movies.results[randommovie].poster_path;
   MovieImage.src = movieposter;
 
+
+  console.log(movies)
+  console.log(randommovie)
+  console.log(movies.results[100])
+  console.log(movies.results[randommovie].original_title)
+  movieTitle.textContent = movies.results[randommovie].original_title
+  overviewDiv.textContent = movies.results[randommovie].overview
+
+
+
   console.log(movies);
   console.log(randommovie);
   console.log(movies.results[100]);
@@ -53,7 +63,6 @@ async function getMovies() {
   overviewDiv.textContent = movies.results[randommovie].overview;
 }
 
-// generateBtn.addEventListener("click", getRandomMeal);
 
 // function getRandomMeal() {
 //   fetch(`https://www.themealdb.com/api/json/v1/1/random.php`)
