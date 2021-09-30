@@ -61,4 +61,4 @@ async function getMovies() {
 //     .then((data) => {
 //       console.log(data);
 //     });
-//   }
+//   } 
