@@ -81,98 +81,84 @@
         >
           One less decision...
         </h3>
-        <div class="flex justify-center">
-          <button
-            id="generate-button"
-            class="
-              hover:bg-indigo-900
-              inline
-              text-white
-              rounded-md
-              p-2
-              m-2
-              bg-red-600
-            "
-          >
-            Generate your night in
-          </button>
-        </div>
-
+        
         <h3
+        class="
+        w-full
+        p-2
+        text-xl
+        font-semibold
+        text-center
+        mx-auto
+        text-white
+        "
+        >
+        Not your lucky day? Pick a filter
+      </h3>
+      <div class="flex justify-center menu mb-8">
+        <form action="#">
+          <fieldset>
+            <label for="diet">Dietary Requirements</label>
+            <select name="diet" id="diet">
+              <option disabled selected>Please pick one</option>
+              <option>Vegetarian</option>
+              <option>Vegan</option>
+              <option>Dessert</option>
+            </select>
+            <label for="genre">Genre</label>
+            <select name="genre" id="genre">
+              <option disabled selected>Please pick one</option>
+              <option>Action</option>
+              <option>Comedy</option>
+              <option>Drama</option>
+              <option>Family</option>
+              <option>Romance</option>
+            </select>
+            <label for="rating">Rating</label>
+            <select name="rating" id="rating">
+              <option disabled selected>Please pick one</option>
+              <option>G</option>
+              <option>PG</option>
+              <option>M</option>
+              <option>MA</option>
+              <option>R</option>
+            </select>
+          </fieldset>
+        </form>
+      </div>
+      <div class="flex justify-center">
+        <button
+          id="generate-button"
           class="
-            w-full
-            p-2
-            text-xl
-            font-semibold
-            text-center
-            mx-auto
+            hover:bg-indigo-900
+            inline
             text-white
+            rounded-md
+            p-2
+            m-2
+            bg-red-600
           "
         >
-          Not your lucky day? Pick a filter
-        </h3>
-        <div class="flex justify-center menu mb-8">
-          <form action="#">
-            <fieldset>
-              <label for="diet">Dietary Requirements</label>
-              <select name="diet" id="diet">
-                <option disabled selected>Please pick one</option>
-                <option>Vegetarian</option>
-                <option>Vegan</option>
-                <option>Dessert</option>
-              </select>
-              <label for="genre">Genre</label>
-              <select name="genre" id="genre">
-                <option disabled selected>Please pick one</option>
-                <option>Action</option>
-                <option>Comedy</option>
-                <option>Drama</option>
-                <option>Family</option>
-                <option>Romance</option>
-              </select>
-              <label for="rating">Rating</label>
-              <select name="rating" id="rating">
-                <option disabled selected>Please pick one</option>
-                <option>G</option>
-                <option>PG</option>
-                <option>M</option>
-                <option>MA</option>
-                <option>R</option>
-              </select>
-            </fieldset>
-          </form>
-        </div>
-        <div class="flex justify-center">
-          <button
-            id="filter-button"
-            class="
-              hover:bg-indigo-900
-              text-white
-              rounded-lg
-              p-2
-              bg-red-600
-              mb-4
-            "
-          >
-            Let's go!
-          </button>
-        </div>
-      </section>
-      <!-- Column 2  -->
-      <section
-        class="
-          m-2
-          flex flex-wrap
-          justify-center
-          w-full
-          md:flex-1
-          lg:flex-1
-          xl:flex-1
-          2xl:flex-1
-          border-solid border-2 border-white
-          rounded-lg
-        "
-      >
+          Generate your night in
+        </button>
+      </div>
+      
+    </section>
+    <!-- Column 2  -->
+    <section
+    class="
+    m-2
+    flex flex-wrap
+    justify-center
+    w-full
+    md:flex-1
+    lg:flex-1
+    xl:flex-1
+    2xl:flex-1
+    border-solid border-2 border-white
+    rounded-lg
+    "
+    >
         <h3
           class="
             p-2
@@ -194,14 +180,14 @@
           class="py-2 px-4 mx-auto block"
           id="MoviePoster"
         />
-        <div id="movie-title" class="w-full">
-        <h4 class="text-white text-xl font-semibold p-2 text-2xl text-center border-2 border-solid border-white rounded-lg mx-4">
+        <div class="w-full">
+        <h4 id="movie-title" class="text-white text-xl font-semibold p-2 text-2xl text-center border-2 border-solid border-white rounded-lg mx-4">
           Dodgeball
         </h4>
       </div>
-        <div id="overview" class="m-4 text-center bg-white rounded-md">
+        <div class="m-4 text-center bg-white rounded-md">
           
-          <p class="py-2 px-4">
+          <p id="overview" class="p-4">
             Praesent sapien massa, convallis a pellentesque nec, egestas non
             nisi. Vestibulum ante ipsum primis in faucibus orci luctus et
             ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet.
@@ -214,7 +200,7 @@
           class="py-2 px-4 mx-auto block"
           id = "food-poster"
         />
-        <div id="recipe-title" class="w-full">
+        <div class="w-full">
         <h4 id = "recipe-heading" class="text-white text-xl font-semibold p-2 text-2xl text-center border-2 border-white border-white rounded-lg mx-4">
           Pepperoni Pizza
         </h4>
@@ -223,8 +209,8 @@
           
           <div class="m-4 text-center bg-white rounded-md">
           <h3 class="font-semibold">Ingredients</h3>
-          <p class="py-2 px-4">
-            <ul id="ingredients" >
+          <p class="p-2">
+            <ul class="p-2" id="ingredients" >
             Praesent sapien massa, convallis a pellentesque nec, egestas non
             nisi. Vestibulum ante ipsum primis in faucibus orci luctus et
             ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet
@@ -235,9 +221,9 @@
             sit amet aliquam vel, ullamcorper sit amet ligula.
             </ul>
           </p>
-          <h3 class="font-semibold">Method</h3>
+          <h3 class="p-2 font-semibold">Method</h3>
 
-          <div class="py-2 px-4">
+          <div class="p-2">
             <p class="readmore" id="method" >
 
             Vestibulum ante ipsum primis in faucibus orci luctus et ultrices

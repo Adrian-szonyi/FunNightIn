@@ -14,7 +14,7 @@ label {
   color: white;
 }
 
-.readmore {
+/* .readmore {
   position: relative;
   max-height: 50px;
   overflow: hidden;
@@ -58,4 +58,4 @@ label {
 }
 .readmore-link.expand:after {
   content: "Read less";
-}
+} */
