@@ -11,4 +11,5 @@ $(".readmore-link").click(function (e) {
       $(e.target).parent(".readmore").addClass("expand");
       $(e.target).addClass("expand");
     }
+    
   });

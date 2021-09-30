@@ -20,5 +20,6 @@ function getRandomMeal() {
       methodText.innerText = data.meals[0].strInstructions;      
       
     }); 
+    
 
 }
