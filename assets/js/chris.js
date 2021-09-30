@@ -17,10 +17,9 @@ function getRandomMeal() {
       console.log(data);
       foodPoster.src = data.meals[0].strMealThumb;
       foodTitle.innerText = data.meals[0].strMeal;
-      methodText.innerText = data.meals[0].strInstructions;
-
+      methodText.innerText = data.meals[0].strInstructions;      
       
-      
-    });
+    }); 
+    
 
 }
