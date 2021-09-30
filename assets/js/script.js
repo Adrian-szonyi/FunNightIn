@@ -58,7 +58,7 @@ async function getMovies() {
   movieTitle.textContent = movies.results[randommovie].original_title
   overviewDiv.textContent = movies.results[randommovie].overview
 
-}
+
 
   console.log(movies);
   console.log(randommovie);
