@@ -59,3 +59,7 @@ label {
 .readmore-link.expand:after {
   content: "Read less";
 }
+
+.hidden {
+  display: none;
+}

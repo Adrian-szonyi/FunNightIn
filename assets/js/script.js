@@ -11,7 +11,6 @@ $(function () {
   $("#rating").selectmenu();
 });
 
-
 // Generate random movie and meal button
 var generateBtn = document.querySelector("#generate-button");
 // Generate with filters movie and meal button
@@ -46,15 +45,12 @@ async function getMovies() {
     movies.results[randommovie].poster_path;
   MovieImage.src = movieposter;
 
-
-  console.log(movies)
-  console.log(randommovie)
-  console.log(movies.results[100])
-  console.log(movies.results[randommovie].original_title)
-  movieTitle.textContent = movies.results[randommovie].original_title
-  overviewDiv.textContent = movies.results[randommovie].overview
-
-
+  console.log(movies);
+  console.log(randommovie);
+  console.log(movies.results[100]);
+  console.log(movies.results[randommovie].original_title);
+  movieTitle.textContent = movies.results[randommovie].original_title;
+  overviewDiv.textContent = movies.results[randommovie].overview;
 
   console.log(movies);
   console.log(randommovie);
@@ -63,12 +59,3 @@ async function getMovies() {
   movieTitle.textContent = movies.results[randommovie].original_title;
   overviewDiv.textContent = movies.results[randommovie].overview;
 }
-
-
-// function getRandomMeal() {
-//   fetch(`https://www.themealdb.com/api/json/v1/1/random.php`)
-//     .then((response) => response.json())
-//     .then((data) => {
-//       console.log(data);
-//     });
-//   } 
