@@ -60,24 +60,33 @@ function saveRecipe() {
   }
   if (savedRecipeTitles.includes(chosenRecipe)) return;
   savedRecipeTitles.push(chosenRecipe);
-  localStorage.setItem("movie", JSON.stringify(savedRecipeTitles));
+  localStorage.setItem("recipe", JSON.stringify(savedRecipeTitles));
   var newFavRecipe = document.createElement("button");
   newFavRecipe.classList.add("favouritesBtn");
   newFavRecipe.textContent = chosenRecipe;
   favRecipes.appendChild(newFavRecipe);
 }
 
-// function cityButton() {
-//     storedCity = localStorage.getItem("city");
-//     if (storedCity) {
-//       storedCity = JSON.parse(storedCity);
-//       for (let index = 0; index < storedCity.length; index++) {
-//         console.log(storedCity[index]);
-//         var btn = document.createElement("button");
-//         btn.classList.add("cityBtn");
-//         btn.innerHTML = storedCity[index];
-//         cityArray.appendChild(btn);
-//       }
-//     }
-//   }
-//   cityButton();
+function savedFav() {
+  savedMovieTitles = localStorage.getItem("movie");
+  savedRecipeTitles = localStorage.getItem("recipe");
+  if (savedMovieTitles) {
+    savedMovieTitles = JSON.parse(savedMovieTitles);
+    for (let index = 0; index < savedMovieTitles.length; index++) {
+      var movieBtn = document.createElement("button");
+      movieBtn.classList.add("favouritesBtn");
+      movieBtn.innerHTML = savedMovieTitles[index];
+      favMovies.appendChild(movieBtn);
+    }
+  }
+  if (savedRecipeTitles) {
+    savedRecipeTitles = JSON.parse(savedRecipeTitles);
+    for (let index = 0; index < savedRecipeTitles.length; index++) {
+      var recipeBtn = document.createElement("button");
+      recipeBtn.classList.add("favouritesBtn");
+      recipeBtn.innerHTML = savedRecipeTitles[index];
+      favRecipes.appendChild(recipeBtn);
+    }
+  }
+}
+savedFav();
