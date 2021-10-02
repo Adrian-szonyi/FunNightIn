@@ -72,3 +72,7 @@ label {
   width: 100%;
   margin: 10px;
 }
+
+.favouritesBtn:hover {
+  background-color: rgba(30, 58, 138);
+}

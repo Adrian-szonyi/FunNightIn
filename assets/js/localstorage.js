@@ -14,6 +14,7 @@ var movieTitle = document.querySelector("#movie-title");
 var foodTitle = document.querySelector("#recipe-heading");
 var favMovies = document.querySelector("#fav-movies");
 var favRecipes = document.querySelector("#fav-recipes");
+var clearAllStorage = document.querySelector("#clear-history");
 
 generateBtn.addEventListener("click", unhideColumn);
 
@@ -24,6 +25,18 @@ function unhideColumn(params) {
 }
 saveMovieBtn.addEventListener("click", saveMovie);
 saveRecipeBtn.addEventListener("click", saveRecipe);
+clearAllStorage.addEventListener("click", clearLocal);
+
+function clearLocal(params) {
+  localStorage.clear("movie");
+  while (favMovies.firstChild) {
+    favMovies.removeChild(favMovies.lastChild);
+  }
+  localStorage.clear("recipe");
+  while (favRecipes.firstChild) {
+    favRecipes.removeChild(favRecipes.lastChild);
+  }
+}
 
 function saveMovie() {
   var chosenMovie = movieTitle.textContent;
