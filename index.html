@@ -1,63 +1,49 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" /> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title></title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://code.jquery.com/ui/1.13.0-rc.2/themes/smoothness/jquery-ui.css"
-      rel="stylesheet"
-    />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400;1,500;1,600;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://code.jquery.com/ui/1.13.0-rc.2/jquery-ui.min.js"
-      integrity="sha256-RQLbEU539dpygNMsBGZlplus6CkitaLy0btTCHcULpI="
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body class="bg-gradient-to-b from-indigo-900 via-purple-500 to-blue-300">
-    <header class="text-center w-full p-4 my-4">
-      <h1
-        class="
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Fun Night In</title>
+  <meta name="description" content="Fun Night In Movie and Meal Generator" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://code.jquery.com/ui/1.13.0-rc.2/themes/smoothness/jquery-ui.css" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400;1,500;1,600;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.13.0-rc.2/jquery-ui.min.js"
+    integrity="sha256-RQLbEU539dpygNMsBGZlplus6CkitaLy0btTCHcULpI=" crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-gradient-to-b from-indigo-900 via-purple-500 to-blue-300">
+  <header class="text-center w-full p-4 my-4">
+    <h1 class="
           inline
           p-4
           font-semibold
           italic
           text-5xl text-white
           border-dashed border-2 border-white
-        "
-      >
-        Fun Night In
-      </h1>
-    </header>
+        ">
+      Fun Night In
+    </h1>
+  </header>
 
-    <p class="text-white p-4 text-center text-lg">
-      Covid got you down and you can't make adult decisions anymore? Fun Night
-      In will make that decision for you! Get a random movie and meal or pick
-      from a filter. Save your favourite combos.
-    </p>
-    <div class="flex flex-wrap">
-      <!-- Column 1   -->
-      <section
-        class="
+  <p class="text-white p-4 text-center text-lg">
+    Covid got you down and you can't make adult decisions anymore? Fun Night
+    In will make that decision for you! Get a random movie and meal or pick
+    from a filter. Save your favourite combos.
+  </p>
+  <div class="flex flex-wrap">
+    <!-- Column 1   -->
+    <section class="
           m-2
           w-full
           md:flex-1
@@ -66,10 +52,8 @@
           2xl:flex-1
           border-solid border-2 border-white
           rounded-lg
-        "
-      >
-        <h3
-          class="
+        ">
+      <h3 class="
             w-full
             p-2
             text-xl
@@ -77,10 +61,9 @@
             text-center
             mx-auto
             text-white
-          "
-        >
-          One less decision...
-        </h3>
+          ">
+        One less decision...
+      </h3>
       <div class="flex justify-center menu mb-8">
         <form action="#">
           <fieldset>
@@ -110,41 +93,34 @@
           </fieldset>
         </form>
       </div>
-      <div class="flex justify-center">
-        <button
-          id="generate-button"
-          class="
-            hover:bg-indigo-900
-            inline
-            text-white
-            rounded-md
-            p-2
-            m-2
-            bg-red-600
-          "
-        >
+      <div class="text-center">
+        <button id="generate-button" class="
+              hover:bg-indigo-900
+              inline
+              text-white
+              rounded-md
+              p-2
+              m-2
+              bg-red-600
+            ">
           Generate your night in
         </button>
       </div>
-      
     </section>
-    <!-- Column 2  -->
-    <section
-    class="
-    m-2
-    flex flex-wrap
-    justify-center
-    w-full
-    md:flex-1
-    lg:flex-1
-    xl:flex-1
-    2xl:flex-1
-    border-solid border-2 border-white
-    rounded-lg
-    "
-    >
-        <h3
-          class="
+
+    <section class="
+        m-2
+        flex flex-wrap
+        justify-center
+        w-full
+        md:flex-1
+        lg:flex-1
+        xl:flex-1
+        2xl:flex-1
+        border-solid border-2 border-white
+        rounded-lg
+        ">
+      <h3 class="
             p-2
             text-xl
             font-semibold
@@ -153,68 +129,56 @@
             text-white
             block
             w-full
-          "
-        >
-          Your fun night in begins here!
-       
-        </h3>
-        <div id="hidden" class="hidden">
+          ">
+        Your fun night in begins here!
+
+      </h3>
+      <div id="hidden" class="hidden">
         <div class="w-full text-center">
-        <img 
-          src=""
-          width="200px"
-          height="auto"
-          class="p-4 mx-auto text-center"
-          id="MoviePoster"
-        />
+          <img src="" width="200px" height="auto" class="p-4 mx-auto text-center" id="MoviePoster" />
         </div>
         <div class="w-full flex">
-          <h4 id = "movie-title" class="w-full text-white text-xl font-semibold p-2 text-2xl text-center border-2 border-white border-white rounded-lg ml-4">
-          
-        </h4>
-        <button id="save-movie" class="ml-2 mr-4"><img src="assets/images/icons8-save-50.png"></button>
+          <h4 id="movie-title"
+            class="w-full text-white text-xl font-semibold p-2 text-2xl text-center border-2 border-white border-white rounded-lg ml-4">
+          </h4>
+          <button id="save-movie" class="ml-2 mr-4">
+            <img src="assets/images/icons8-save-50.png">
+          </button>
         </div>
-        <div class="m-4 text-center bg-white rounded-md">   
+        <div class="m-4 text-center bg-white rounded-md">
           <p id="overview" class="p-4">
-            
           </p>
         </div>
         <div class="w-full text-center">
-        <img
-          src=""
-          width="200px"
-          height="auto"
-          class="p-4 mx-auto text-center"
-          id = "food-poster"
-        />
+          <img src="" width="200px" height="auto" class="p-4 mx-auto text-center" id="food-poster" />
         </div>
         <div class="w-full flex">
-        <h4 id = "recipe-heading" class="w-full text-white text-xl font-semibold p-2 text-2xl text-center border-2 border-white border-white rounded-lg ml-4">
-          
-        </h4>
-        <button id="save-recipe" class="ml-2 mr-4"><img src="assets/images/icons8-save-50.png"></button>
-        </div>  
-          <div class="p-4 m-4 text-center bg-white rounded-md">
+          <h4 id="recipe-heading"
+            class="w-full text-white text-xl font-semibold p-2 text-2xl text-center border-2 border-white border-white rounded-lg ml-4">
+          </h4>
+          <button id="save-recipe" class="ml-2 mr-4">
+            <img src="assets/images/icons8-save-50.png">
+          </button>
+        </div>
+        <div class="p-4 m-4 text-center bg-white rounded-md">
           <h3 class="font-semibold">Ingredients</h3>
           <p class="p-2">
-            <ul class="p-2" id="ingredients" >
-            
-            </ul>
+          <ul class="p-2" id="ingredients">
+          </ul>
           </p>
-          <h3 class="p-2 font-semibold">Method</h3>
-
+          <h3 class="p-2 font-semibold">Method
+          </h3>
           <div class="p-2 readmore">
-            <p id="method" >
-                     
+            <p id="method">
             </p>
-            <div class="readmore-link"></div> 
-        </div>
+            <div class="readmore-link">
+            </div>
+          </div>
         </div>
       </div>
-      </section>
-      <!-- Column 3  -->
-      <section
-        class="
+    </section>
+    <!-- Column 3  -->
+    <section class="
           m-2
           w-full
           md:flex-1
@@ -223,10 +187,8 @@
           2xl:flex-1
           border-solid border-2 border-white
           rounded-lg
-        "
-      >
-        <h3
-          class="
+        ">
+      <h3 class="
             w-full
             p-2
             text-xl
@@ -234,87 +196,44 @@
             text-center
             mx-auto
             text-white
-          "
-        >
-          Favourites
-        </h3>
-        <div
-          class="
-            text-center
-            bg-purple-500
-            h-12
-            m-2
-            rounded-lg
-            hover:bg-purple-200
-            text-white
-          "
-        >
-          <ul>
-            <li>Forrest Gump</li>
-            <li>BBQ Pork Sloppy Joes</li>
-          </ul>
-        </div>
-        <div
-          class="
-            text-center
-            bg-purple-500
-            h-12
-            m-2
-            rounded-lg
-            hover:bg-purple-200
-            text-white
-          "
-        >
-          <ul>
-            <li>Kickboxer</li>
-            <li>Kung Po Prawns</li>
-          </ul>
-        </div>
-        <div
-          class="
-            text-center
-            bg-purple-500
-            h-12
-            m-2
-            rounded-lg
-            hover:bg-purple-200
-            text-white
-          "
-        ></div>
-        <div
-          class="
-            text-center
-            bg-purple-500
-            h-12
-            m-2
-            rounded-lg
-            hover:bg-purple-200
-            text-white
-          "
-        ></div>
-        <div
-          class="
-            text-center
-            bg-purple-500
-            h-12
-            m-2
-            rounded-lg
-            hover:bg-purple-200
-            text-white
-          "
-        ></div>
-      </section>
-    </div>
-    <footer class="text-center text-blue-900 w-full h-24 mt-2">
-      <h4>This is the footer</h4>
-    </footer>
-    <script src="assets/js/script.js" async defer></script>
+          ">
+        Favourites
+      </h3>
+      <h4 class="
+      w-full
+      p-2
+      text-lg
+      text-center
+      mx-auto
+      text-white
+      italic
+    ">Movies</h4>
+      <div class="flex flex-wrap" id="fav-movies"></div>
+      <h4 class="
+      w-full
+      p-2
+      text-lg
+      text-center
+      mx-auto
+      text-white
+      italic
+    ">Recipes</h4>
+      <div class="flex flex-wrap" id="fav-recipes"></div>
+      <div id= "clear-history" class="text-center">
+      <button class ="p-4 text-white underline">Clear all</button>
+      </div>
+    </section>
+  </div>
+  <footer class="text-center text-blue-900 w-full h-24 mt-2">
+    <h4>Made by Purple Cobras</h4>
+  </footer>
+  <script src="assets/js/script.js" async defer></script>
 
-    <script src="assets/js/readmore.js" async defer></script>
+  <script src="assets/js/readmore.js" async defer></script>
 
-    <script src="assets/js/chris.js" async defer></script>
+  <script src="assets/js/chris.js" async defer></script>
 
-    <script src="assets/js/localstorage.js" async defer></script>
+  <script src="assets/js/localstorage.js" async defer></script>
 
-  </body>
+</body>
 </html>

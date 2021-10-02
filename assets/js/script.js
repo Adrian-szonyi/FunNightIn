@@ -38,6 +38,7 @@ var Comedy = document.querySelector("#Comedy")
 generateBtn.addEventListener("click", getMovies);
 
 async function getMovies() {
+
   var selectGenre = document.getElementById("genre").value
     if (selectGenre === "Comedy") {
       selectGenre = 35;
@@ -79,11 +80,13 @@ async function getMovies() {
   var randompage = Math.floor((Math.random() * 1)+1);
   var randommovie = Math.floor((Math.random() * 18)+1);
   console.log(selectGenre)
+
   var movies = await fetch(
     "https://api.themoviedb.org/3/discover/movie?api_key=7113d8f1b2a86dd4b4fe2e64488fe988&sort_by=popularity.desc&release_date.gte=" + MinReleaseDate + "&release_date.lte=" + MaxReleaseDate + "&vote_count.gte=5000&with_genres=" + selectGenre + "&original_language=en-US&page=" +
       randompage
 
   ).then((response) => response.json());
+
   var movieposter =
     "https://image.tmdb.org/t/p/w500/" +
     movies.results[randommovie].poster_path;
@@ -94,6 +97,7 @@ async function getMovies() {
   console.log(movies.results[100]);
   console.log(movies.results[randommovie].original_title);
   movieTitle.textContent = movies.results[randommovie].original_title;
+  console.log(movies.results[randommovie].original_title);
   overviewDiv.textContent = movies.results[randommovie].overview;
 
   console.log(movies);
