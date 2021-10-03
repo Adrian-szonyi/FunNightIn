@@ -81,68 +81,98 @@
         >
           One less decision...
         </h3>
-      <div class="flex justify-center menu mb-8">
-        <form action="#">
-          <fieldset>
-            <label for="diet">Dietary Requirements</label>
-            <select name="diet" id="diet">
-              <option disabled selected>Pick one or none</option>
-              <option>Vegetarian</option>
-              <option>Vegan</option>
-              <option>Dessert</option>
-            </select>
-            <label for="genre">Genre</label>
-            <select name="genre" id="genre">
-              <option disabled selected>Pick one or none</option>
-              <option value="Action">Action</option>
-              <option id="Comedy">Comedy</option>
-              <option value="Drama">Drama</option>
-              <option value="Family">Family</option>
-              <option value="Romance">Romance</option>
-            </select>
-            <label for="rating">Release Decade</label>
-            <select name="releaseperiod" id="releaseperiod">
-              <option disabled selected>Pick one or none</option>
-              <option>2011 - 2021</option>
-              <option>2000 - 2010</option>
-              <option>1989 - 1999</option>
-            </select>
-          </fieldset>
-        </form>
-      </div>
-      <div class="flex justify-center">
-        <button
-          id="generate-button"
+        <div class="flex justify-center">
+          <button
+            id="generate-button"
+            class="
+              hover:bg-indigo-900
+              inline
+              text-white
+              rounded-md
+              p-2
+              m-2
+              bg-red-600
+            "
+          >
+            Generate your night in
+          </button>
+        </div>
+
+        <h3
           class="
-            hover:bg-indigo-900
-            inline
-            text-white
-            rounded-md
+            w-full
             p-2
-            m-2
-            bg-red-600
+            text-xl
+            font-semibold
+            text-center
+            mx-auto
+            text-white
           "
         >
-          Generate your night in
-        </button>
-      </div>
-      
-    </section>
-    <!-- Column 2  -->
-    <section
-    class="
-    m-2
-    flex flex-wrap
-    justify-center
-    w-full
-    md:flex-1
-    lg:flex-1
-    xl:flex-1
-    2xl:flex-1
-    border-solid border-2 border-white
-    rounded-lg
-    "
-    >
+          Not your lucky day? Pick a filter
+        </h3>
+        <div class="flex justify-center menu mb-8">
+          <form action="#">
+            <fieldset>
+              <label for="diet">Dietary Requirements</label>
+              <select name="diet" id="diet">
+                <option disabled selected>Please pick one</option>
+                <option>Vegetarian</option>
+                <option>Vegan</option>
+                <option>Dessert</option>
+              </select>
+              <label for="genre">Genre</label>
+              <select name="genre" id="genre">
+                <option disabled selected>Please pick one</option>
+                <option>Action</option>
+                <option>Comedy</option>
+                <option>Drama</option>
+                <option>Family</option>
+                <option>Romance</option>
+              </select>
+              <label for="rating">Rating</label>
+              <select name="rating" id="rating">
+                <option disabled selected>Please pick one</option>
+                <option>G</option>
+                <option>PG</option>
+                <option>M</option>
+                <option>MA</option>
+                <option>R</option>
+              </select>
+            </fieldset>
+          </form>
+        </div>
+        <div class="flex justify-center">
+          <button
+            id="filter-button"
+            class="
+              hover:bg-indigo-900
+              text-white
+              rounded-lg
+              p-2
+              bg-red-600
+              mb-4
+            "
+          >
+            Let's go!
+          </button>
+        </div>
+      </section>
+      <!-- Column 2  -->
+      <section
+        class="
+          m-2
+          flex flex-wrap
+          justify-center
+          w-full
+          md:flex-1
+          lg:flex-1
+          xl:flex-1
+          2xl:flex-1
+          border-solid border-2 border-white
+          rounded-lg
+        "
+      >
         <h3
           class="
             p-2
@@ -156,61 +186,72 @@
           "
         >
           Your fun night in begins here!
-       
         </h3>
-        <div id="hidden" class="hidden">
-        <div class="w-full text-center">
         <img 
-          src=""
+          src="assets/images/dodgeball placeholder.jpg"
           width="200px"
           height="auto"
-          class="p-4 mx-auto text-center"
+          class="py-2 px-4 mx-auto block"
           id="MoviePoster"
         />
-        </div>
-        <div class="w-full flex">
-          <h4 id = "movie-title" class="w-full text-white text-xl font-semibold p-2 text-2xl text-center border-2 border-white border-white rounded-lg ml-4">
-          
+        <div id="movie-title" class="w-full">
+        <h4 class="text-white text-xl font-semibold p-2 text-2xl text-center border-2 border-solid border-white rounded-lg mx-4">
+          Dodgeball
         </h4>
-        <button id="save-movie" class="ml-2 mr-4"><img src="assets/images/icons8-save-50.png"></button>
-        </div>
-        <div class="m-4 text-center bg-white rounded-md">   
-          <p id="overview" class="p-4">
-            
+      </div>
+        <div id="overview" class="m-4 text-center bg-white rounded-md">
+          
+          <p class="py-2 px-4">
+            Praesent sapien massa, convallis a pellentesque nec, egestas non
+            nisi. Vestibulum ante ipsum primis in faucibus orci luctus et
+            ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet.
           </p>
         </div>
-        <div class="w-full text-center">
         <img
-          src=""
+          src="assets/images/pizza-1327877.jpeg"
           width="200px"
           height="auto"
-          class="p-4 mx-auto text-center"
+          class="py-2 px-4 mx-auto block"
           id = "food-poster"
         />
-        </div>
-        <div class="w-full flex">
-        <h4 id = "recipe-heading" class="w-full text-white text-xl font-semibold p-2 text-2xl text-center border-2 border-white border-white rounded-lg ml-4">
-          
+        <div id="recipe-title" class="w-full">
+        <h4 id = "recipe-heading" class="text-white text-xl font-semibold p-2 text-2xl text-center border-2 border-white border-white rounded-lg mx-4">
+          Pepperoni Pizza
         </h4>
-        <button id="save-recipe" class="ml-2 mr-4"><img src="assets/images/icons8-save-50.png"></button>
-        </div>  
-          <div class="p-4 m-4 text-center bg-white rounded-md">
+      </div>
+          <div class="m-4 text-center bg-white rounded-md">
+          
+          <div class="m-4 text-center bg-white rounded-md">
           <h3 class="font-semibold">Ingredients</h3>
           <p class="p-2">
-            <ul class="p-2" id="ingredients" >
+          <ul class="p-2" id="ingredients">
             
-            </ul>
+          </ul>
           </p>
-          <h3 class="p-2 font-semibold">Method</h3>
+          <h3 class="font-semibold">Method</h3>
 
-          <div class="p-2 readmore">
-            <p id="method" >
-                     
+          <div class="py-2 px-4">
+            <p class="readmore" id="method" >
+
+            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam
+            vel, ullamcorper sit amet ligula. Quisque velit nisi, pretium ut
+            lacinia in, elementum id enim. Vivamus magna justo, lacinia eget
+            consectetur sed, convallis at tellus. Nulla porttitor accumsan
+            tincidunt. Curabitur non nulla sit amet nisl tempus convallis quis
+            ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.
+            Vestibulum ac diam sit amet quam vehicula elementum sed sit amet
+            dui. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
+            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam
+            vel, ullamcorper sit amet ligula.            
+
+            <!-- <span class="readmore-link"></span>  -->
             </p>
-            <div class="readmore-link"></div> 
+            
         </div>
         </div>
-      </div>
       </section>
       <!-- Column 3  -->
       <section
@@ -313,8 +354,6 @@
     <script src="assets/js/readmore.js" async defer></script>
 
     <script src="assets/js/chris.js" async defer></script>
-
-    <script src="assets/js/localstorage.js" async defer></script>
 
   </body>
 </html>
