@@ -6,6 +6,7 @@
 
 // loading circle at generate button font awesome
 
+// Global variables
 var saveMovieBtn = document.querySelector("#save-movie");
 var saveRecipeBtn = document.querySelector("#save-recipe");
 var hideColumn2 = document.querySelector("#hidden");
@@ -16,17 +17,20 @@ var favMovies = document.querySelector("#fav-movies");
 var favRecipes = document.querySelector("#fav-recipes");
 var clearAllStorage = document.querySelector("#clear-history");
 
+// Event Listeners
 generateBtn.addEventListener("click", unhideColumn);
+saveMovieBtn.addEventListener("click", saveMovie);
+saveRecipeBtn.addEventListener("click", saveRecipe);
+clearAllStorage.addEventListener("click", clearLocal);
 
+// Unhide 2nd column content after 2 seconds
 function unhideColumn(params) {
   setTimeout(function () {
     hideColumn2.classList.remove("hidden");
   }, 2000);
 }
-saveMovieBtn.addEventListener("click", saveMovie);
-saveRecipeBtn.addEventListener("click", saveRecipe);
-clearAllStorage.addEventListener("click", clearLocal);
 
+// Clear local storage
 function clearLocal(params) {
   localStorage.clear("movie");
   while (favMovies.firstChild) {
@@ -38,6 +42,7 @@ function clearLocal(params) {
   }
 }
 
+// Save favourite movie
 function saveMovie() {
   var chosenMovie = movieTitle.textContent;
   var savedMovieTitles = localStorage.getItem("movie");
@@ -59,6 +64,7 @@ function saveMovie() {
   favMovies.appendChild(newFavMovie);
 }
 
+// Save favorite recipe
 function saveRecipe() {
   var chosenRecipe = foodTitle.textContent;
   var savedRecipeTitles = localStorage.getItem("recipe");
@@ -80,6 +86,7 @@ function saveRecipe() {
   favRecipes.appendChild(newFavRecipe);
 }
 
+// Get local storage & create buttons
 function savedFav() {
   savedMovieTitles = localStorage.getItem("movie");
   savedRecipeTitles = localStorage.getItem("recipe");
@@ -94,12 +101,18 @@ function savedFav() {
   }
   if (savedRecipeTitles) {
     savedRecipeTitles = JSON.parse(savedRecipeTitles);
+    console.log(savedRecipeTitles);
     for (let index = 0; index < savedRecipeTitles.length; index++) {
       var recipeBtn = document.createElement("button");
       recipeBtn.classList.add("favouritesBtn");
       recipeBtn.innerHTML = savedRecipeTitles[index];
+      console.log(savedRecipeTitles[index]);
       favRecipes.appendChild(recipeBtn);
     }
   }
 }
 savedFav();
+
+// Store meal object test
+// localStorage.setItem("meal", JSON.stringify(data.meals[0]));
+//recipeBtn.innerHTML=data.meals[0].strMeal;
