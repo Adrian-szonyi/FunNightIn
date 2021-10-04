@@ -15,8 +15,36 @@ function getRandomMeal() {
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
+      const meal = data.meals[0];
       foodPoster.src = data.meals[0].strMealThumb;
       foodTitle.innerText = data.meals[0].strMeal;
       methodText.innerText = data.meals[0].strInstructions;
+<<<<<<< HEAD
     });
 }
+=======
+      // ingredientEl.innerText = data.meals[0].strIngredient1; 
+      getIngredients(meal);
+         
+      function getIngredients (meal) {
+        const ingredients = [];
+        console.log(ingredients);
+        for (let i = 1; i <=20; i++) {
+          if (meal[`strIngredient${i}`]) {
+            ingredients.push(
+              `${meal[`strIngredient${i}`]}`
+            )
+          } else {
+            break;
+          }
+        }
+
+        ingredientEl.innerHTML = 
+        `${ingredients.map((ingredients) => `<li>${ingredients}</li>`).join("")}`;
+      }
+  
+    }); 
+
+
+}
+>>>>>>> 032f6be015e859f2450730bb0914dc5e4574f723
