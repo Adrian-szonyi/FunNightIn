@@ -75,18 +75,9 @@ async function getMovies() {
  else {
   MaxReleaseDate = "2021-09-09"
   MinReleaseDate = "2011-01-01"
-  console.log(randompage)
  }
-
-if (MaxReleaseDate === "2021-09-09" && selectGenre === "Romance") {
-  MaxReleaseDate = "2021-09-09"
-  MinReleaseDate = "2011-01-01"
-  var randompage = 1;
-  console.log(randompage)
-}
-
- console.log(MaxReleaseDate)
-
+  
+  var randompage = Math.floor((Math.random() * 1)+1);
   var randommovie = Math.floor((Math.random() * 18)+1);
   console.log(selectGenre)
 
