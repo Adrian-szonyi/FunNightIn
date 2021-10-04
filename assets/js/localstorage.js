@@ -24,7 +24,7 @@ var getMeal;
 
 // Event Listeners
 generateBtn.addEventListener("click", unhideColumn);
-saveMovieBtn.addEventListener("click", saveMovie);
+// saveMovieBtn.addEventListener("click", saveMovie);
 // saveRecipeBtn.addEventListener("click", saveRecipe);
 saveRecipeBtn.addEventListener("click", saveMeal);
 clearAllStorage.addEventListener("click", clearLocal);
@@ -51,26 +51,26 @@ function clearLocal(params) {
 }
 
 // Save favourite movie
-function saveMovie() {
-  var chosenMovie = movieTitle.textContent;
-  var savedMovieTitles = localStorage.getItem("movie");
-  if (
-    !savedMovieTitles ||
-    savedMovieTitles === null ||
-    savedMovieTitles === "null"
-  ) {
-    savedMovieTitles = [];
-  } else {
-    savedMovieTitles = JSON.parse(savedMovieTitles);
-  }
-  if (savedMovieTitles.includes(chosenMovie)) return;
-  savedMovieTitles.push(chosenMovie);
-  localStorage.setItem("movie", JSON.stringify(savedMovieTitles));
-  var newFavMovie = document.createElement("button");
-  newFavMovie.classList.add("favouritesBtn");
-  newFavMovie.textContent = chosenMovie;
-  favMovies.appendChild(newFavMovie);
-}
+// function saveMovie() {
+//   var chosenMovie = movieTitle.textContent;
+//   var savedMovieTitles = localStorage.getItem("movie");
+//   if (
+//     !savedMovieTitles ||
+//     savedMovieTitles === null ||
+//     savedMovieTitles === "null"
+//   ) {
+//     savedMovieTitles = [];
+//   } else {
+//     savedMovieTitles = JSON.parse(savedMovieTitles);
+//   }
+//   if (savedMovieTitles.includes(chosenMovie)) return;
+//   savedMovieTitles.push(chosenMovie);
+//   localStorage.setItem("movie", JSON.stringify(savedMovieTitles));
+//   var newFavMovie = document.createElement("button");
+//   newFavMovie.classList.add("favouritesBtn");
+//   newFavMovie.textContent = chosenMovie;
+//   favMovies.appendChild(newFavMovie);
+// }
 
 // Save favorite recipe
 // function saveRecipe() {
@@ -97,7 +97,6 @@ function saveMovie() {
 // Get local storage & create buttons
 function savedFav() {
   savedMovieTitles = localStorage.getItem("movie");
-  // savedRecipeTitles = localStorage.getItem("recipe");
   savedRecipeTitles = localStorage.getItem("meal");
   if (savedMovieTitles) {
     savedMovieTitles = JSON.parse(savedMovieTitles);
@@ -158,6 +157,23 @@ async function getRandomMeal() {
     foodPoster.src = getMeal.meals[0].strMealThumb;
     foodTitle.innerText = getMeal.meals[0].strMeal;
     methodText.innerText = getMeal.meals[0].strInstructions;
+    getIngredients();
+  }
+
+  function getIngredients() {
+    const ingredients = [];
+    console.log(ingredients);
+    for (let i = 1; i <= 20; i++) {
+      if (getMeal.meals[0][`strIngredient${i}`]) {
+        ingredients.push(`${getMeal.meals[0][`strIngredient${i}`]}`);
+      } else {
+        break;
+      }
+    }
+
+    ingredientEl.innerHTML = `${ingredients
+      .map((ingredients) => `<li>${ingredients}</li>`)
+      .join("")}`;
   }
 }
 
