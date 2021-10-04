@@ -77,20 +77,18 @@
             <label for="genre">Genre</label>
             <select name="genre" id="genre">
               <option disabled selected>Pick one or none</option>
-              <option>Action</option>
-              <option>Comedy</option>
-              <option>Drama</option>
-              <option>Family</option>
-              <option>Romance</option>
+              <option value="Action">Action</option>
+              <option id="Comedy">Comedy</option>
+              <option value="Drama">Drama</option>
+              <option value="Family">Family</option>
+              <option value="Romance">Romance</option>
             </select>
-            <label for="rating">Rating</label>
-            <select name="rating" id="rating">
+            <label for="rating">Release Decade</label>
+            <select name="releaseperiod" id="releaseperiod">
               <option disabled selected>Pick one or none</option>
-              <option>G</option>
-              <option>PG</option>
-              <option>M</option>
-              <option>MA</option>
-              <option>R</option>
+              <option>2011 - 2021</option>
+              <option>2000 - 2010</option>
+              <option>1989 - 1999</option>
             </select>
           </fieldset>
         </form>
@@ -233,10 +231,9 @@
 
   <script src="assets/js/readmore.js" async defer></script>
 
-  <script src="assets/js/chris.js" async defer></script>
+  <!-- <script src="assets/js/chris.js" async defer></script> -->
 
   <script src="assets/js/localstorage.js" async defer></script>
 
 </body>
-
 </html>
