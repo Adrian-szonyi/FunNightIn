@@ -9,7 +9,8 @@
 // Global variables
 var saveMovieBtn = document.querySelector("#save-movie");
 var saveRecipeBtn = document.querySelector("#save-recipe");
-var hideColumn2 = document.querySelector("#hidden");
+var hideRecipe = document.querySelector("#hiddenRecipe");
+var hideMovie = document.querySelector("#hiddenMovie");
 var generateBtn = document.querySelector("#generate-button");
 var movieTitle = document.querySelector("#movie-title");
 var foodTitle = document.querySelector("#recipe-heading");
@@ -30,9 +31,10 @@ clearAllStorage.addEventListener("click", clearLocal);
 favRecipes.addEventListener("click", getData);
 
 // Unhide 2nd column content after 2 seconds
-function unhideColumn(params) {
+function unhideColumn() {
   setTimeout(function () {
-    hideColumn2.classList.remove("hidden");
+    hideRecipe.classList.remove("hidden");
+    hideMovie.classList.remove("hidden");
   }, 2000);
 }
 
@@ -195,7 +197,7 @@ function getData(e) {
     selected = selected[0];
   } // add error handling
   console.log("selected", selected);
-  hideColumn2.classList.remove("hidden");
+  hideRecipe.classList.remove("hidden");
   foodPoster.src = selected.strMealThumb;
   foodTitle.innerText = selected.strMeal;
   methodText.innerText = selected.strInstructions;
