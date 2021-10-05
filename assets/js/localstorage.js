@@ -217,4 +217,16 @@ function getData(e) {
   foodPoster.src = selected.strMealThumb;
   foodTitle.innerText = selected.strMeal;
   methodText.innerText = selected.strInstructions;
+
+  const ingredients = [];
+  for (let i = 1; i <= 20; i++) {
+    if (selected[`strIngredient${i}`]) {
+      ingredients.push(`${selected[`strIngredient${i}`]}`);
+    } else {
+      break;
+    }
+  }
+  ingredientEl.innerHTML = `${ingredients
+    .map((ingredients) => `<li>${ingredients}</li>`)
+    .join("")}`;
 }
