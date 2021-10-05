@@ -1,7 +1,7 @@
 # Fun Night In
 
-> Random movie and meal generator. Includes filters to secoify diet requirements, genre and movie release date. Save chosen or favourite results to compare or refer back to later.
-> Live demo [_here_](https://www.example.com).
+> Random movie and meal generator. Includes filters to specify diet requirements, genre and movie release date. Save chosen or favourite results to compare or refer back to later.
+> Live demo [_here_](https://adrian-szonyi.github.io/FunNightIn/).
 
 ## Table of Contents
 
@@ -47,15 +47,9 @@ Project is: _in progress_
 
 ## Room for Improvement
 
-Room for improvement:
-
-- Improvement to be done 1
-- Improvement to be done 2
-
-To do:
-
-- Feature to be added 1
-- Feature to be added 2
+- Ability to remove one favourite from the list at a time. Currently, only all saved items can be deleted.
+- Option show more info on the films selected.
+- More filters for types of films and dietary requirements.
 
 ## Acknowledgements
 
