@@ -165,7 +165,11 @@ async function getRandomMeal() {
     console.log(ingredients);
     for (let i = 1; i <= 20; i++) {
       if (getMeal.meals[0][`strIngredient${i}`]) {
-        ingredients.push(`${getMeal.meals[0][`strIngredient${i}`]}`);
+        ingredients.push(
+          `${getMeal.meals[0][`strMeasure${i}`]} - ${
+            getMeal.meals[0][`strIngredient${i}`]
+          }`
+        );
       } else {
         break;
       }
@@ -221,7 +225,9 @@ function getData(e) {
   const ingredients = [];
   for (let i = 1; i <= 20; i++) {
     if (selected[`strIngredient${i}`]) {
-      ingredients.push(`${selected[`strIngredient${i}`]}`);
+      ingredients.push(
+        `${selected[`strMeasure${i}`]} - ${selected[`strIngredient${i}`]}`
+      );
     } else {
       break;
     }
