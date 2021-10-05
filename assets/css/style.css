@@ -2,6 +2,8 @@ body {
   font-family: "Rubik", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Dropdown styles */
+
 fieldset {
   border: 0;
 }
@@ -13,6 +15,8 @@ label {
 label {
   color: white;
 }
+
+/* Read more feature styles */
 
 .readmore {
   position: relative;
@@ -60,9 +64,13 @@ label {
   content: "Read less";
 }
 
+/* Hidden sections */
+
 .hidden {
   display: none;
 }
+
+/* Favourites list styles */
 
 .favouritesBtn {
   background-color: blueviolet;
