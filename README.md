@@ -35,7 +35,8 @@ Many people are spending more time indoors due to COVID-19 restrictions and the 
 
 ## Screenshots
 
-![Example screenshot](./img/screenshot.png)
+![Desktop Scrrenshot](assets/images/desktop-screenshot.png)
+![Mobile Scrrenshot](assets/images/mobile-screenshot.png)
 
 ## Setup
 
