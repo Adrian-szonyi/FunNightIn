@@ -80,6 +80,8 @@ function unhideColumn() {
 // Movie API
 async function getMovies() {
   var selectGenre = document.getElementById("genre").value;
+
+  //Filter for genre selection
   if (selectGenre === "Comedy") {
     selectGenre = 35;
   } else if (selectGenre === "Action") {
@@ -97,6 +99,7 @@ async function getMovies() {
   var MaxReleaseDate = document.getElementById("releaseperiod").value;
   var MinReleaseDate = document.getElementById("releaseperiod").value;
 
+  //filter for decade release date
   if (MaxReleaseDate === "2011 - 2021") {
     MaxReleaseDate = "2021-09-09";
     MinReleaseDate = "2011-01-01";
@@ -110,7 +113,7 @@ async function getMovies() {
     MaxReleaseDate = "2021-09-09";
     MinReleaseDate = "2011-01-01";
   }
-
+//Requesting the API to get the number of pages based on filter selections
   var pagedata = await fetch(
     "https://api.themoviedb.org/3/discover/movie?api_key=7113d8f1b2a86dd4b4fe2e64488fe988&sort_by=popularity.desc&primary_release_date.gte=" +
       MinReleaseDate +
@@ -120,6 +123,8 @@ async function getMovies() {
       selectGenre +
       "&original_language=en-US"
   ).then((response) => response.json());
+
+  //Randomising a results page and selected result
   var randompage;
   if (pagedata.total_pages === 1) {
     var randompageint = 1;
@@ -134,6 +139,8 @@ async function getMovies() {
   if (randompage === 0 || randompage === -1) {
     randompage = Math.floor(Math.random() * (pagedata.total_pages - 1));
   }
+
+  //Requesting the movie title based on random page, result and filter selections
   movies = await fetch(
     "https://api.themoviedb.org/3/discover/movie?api_key=7113d8f1b2a86dd4b4fe2e64488fe988&sort_by=popularity.desc&primary_release_date.gte=" +
       MinReleaseDate +
