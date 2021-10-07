@@ -17,7 +17,7 @@
 
 ## General Information
 
-Many people are spending more time indoors due to COVID-19 restrictions and the days can become monotomous. Fun Night In movie and meal generator can help to shake things up a bit by offering variety with a random film to watch or meal to create. It can also help if you are indecisive and need some direction. Fun Night In pulls from a database of over 200 meals possibilities and thousands of popular films.
+Many people are spending more time indoors due to COVID-19 restrictions and the days can become monotomous. Fun Night In movie and meal generator can help to shake things up a bit by offering variety with a random film to watch or meal to create. It can also help if you are indecisive and need some direction. Fun Night In pulls from a database of over 200 meal possibilities and hundreds of popular films.
 
 ## Technologies Used
 
@@ -49,7 +49,7 @@ Project is: _in progress_
 ## Room for Improvement
 
 - Ability to remove one favourite from the list at a time. Currently, only all saved items can be deleted.
-- Option show more info on the films selected.
+- Option to show more info on the films selected.
 - More filters for types of films and dietary requirements.
 - Make sure the user does not get the same film in a session.
 
