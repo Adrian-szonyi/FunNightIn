@@ -1,3 +1,4 @@
+// Dropdown filter
 $(function () {
   $("#diet").selectmenu();
 
@@ -11,7 +12,7 @@ $(".readmore-link").click(function (e) {
   // record if our text is expanded
   var isExpanded = $(e.target).hasClass("expand");
 
-  //close all open paragraphs
+  //close open paragraph
   $(".readmore.expand").removeClass("expand");
   $(".readmore-link.expand").removeClass("expand");
 
@@ -34,7 +35,6 @@ var releaseperiod = document.querySelector("#releaseperiod");
 var Comedy = document.querySelector("#Comedy");
 var movies;
 var randommovie;
-var movieData;
 var hideMovie = document.querySelector("#hiddenMovie");
 var favMovies = document.querySelector("#fav-movies");
 var saveMovieBtn = document.querySelector("#save-movie");
@@ -77,6 +77,7 @@ function unhideColumn() {
   }, 2000);
 }
 
+// Movie API
 async function getMovies() {
   var selectGenre = document.getElementById("genre").value;
   if (selectGenre === "Comedy") {
@@ -119,11 +120,11 @@ async function getMovies() {
       selectGenre +
       "&original_language=en-US"
   ).then((response) => response.json());
-
+  var randompage;
   if (pagedata.total_pages === 1) {
     var randompageint = 1;
   } else {
-    var randompage = Math.floor(Math.random() * (pagedata.total_pages - 1));
+    randompage = Math.floor(Math.random() * (pagedata.total_pages - 1));
   }
   if (pagedata.total_results > 19) {
     randommovie = Math.floor(Math.random() * (18 + 1));
@@ -131,7 +132,7 @@ async function getMovies() {
     randommovie = Math.floor(Math.random() * pagedata.total_results);
   }
   if (randompage === 0 || randompage === -1) {
-    var randompage = Math.floor(Math.random() * (pagedata.total_pages - 1));
+    randompage = Math.floor(Math.random() * (pagedata.total_pages - 1));
   }
   movies = await fetch(
     "https://api.themoviedb.org/3/discover/movie?api_key=7113d8f1b2a86dd4b4fe2e64488fe988&sort_by=popularity.desc&primary_release_date.gte=" +
