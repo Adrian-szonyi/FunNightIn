@@ -156,7 +156,6 @@ async function getMovies() {
 // Recipe API
 async function getRandomMeal(url) {
   selectDietOption = selectDiet.value;
-  console.log(selectDietOption);
   var type;
   if (selectDietOption === "") {
     url = `https://www.themealdb.com/api/json/v1/1/random.php`;
@@ -168,14 +167,12 @@ async function getRandomMeal(url) {
   getMeal = await fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       return data;
     });
   // If filter is used, pick a random recipe from chosen array and retrieve content directly using recipe id - ingredients/method not available in filter category array.
   if (type === "filtered") {
     randomMealId = Math.floor(Math.random() * getMeal.meals.length);
     var idNumber = getMeal.meals[randomMealId].idMeal;
-    console.log(idNumber);
     getMeal = await fetch(
       `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${idNumber}`
     )
@@ -213,7 +210,6 @@ function getIngredients(meal) {
 // Save recipe into local storage
 function saveMeal() {
   var chosenMeal = getMeal.meals[0];
-  console.log("meal:" + chosenMeal);
   var savedMeal = localStorage.getItem("meal");
   if (!savedMeal || savedMeal === null || savedMeal === "null") {
     savedMeal = [];
@@ -296,11 +292,10 @@ function getMovieData(e) {
   var getMovieData = JSON.parse(localStorage.getItem("film"));
   var movieId = e.target.getAttribute("data-id");
   var selected = getMovieData.filter((film) => film.id === parseInt(movieId));
-  console.log(selected + "selected");
 
   if (selected.length > 0) {
     selected = selected[0];
-  } // add error handling
+  }
   hideMovie.classList.remove("hidden");
   movieTitle.textContent = selected.original_title;
   overviewDiv.textContent = selected.overview;
@@ -317,7 +312,7 @@ function getRecipeData(e) {
 
   if (selected.length > 0) {
     selected = selected[0];
-  } // add error handling
+  }
   hideRecipe.classList.remove("hidden");
   foodPoster.src = selected.strMealThumb;
   foodTitle.innerText = selected.strMeal;

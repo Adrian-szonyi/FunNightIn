@@ -51,6 +51,7 @@ Project is: _in progress_
 - Ability to remove one favourite from the list at a time. Currently, only all saved items can be deleted.
 - Option show more info on the films selected.
 - More filters for types of films and dietary requirements.
+- Make sure the user does not get the same film in a session.
 
 ## Acknowledgements
 
