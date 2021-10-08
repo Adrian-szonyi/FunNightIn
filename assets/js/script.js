@@ -7,6 +7,10 @@ $(function () {
   $("#releaseperiod").selectmenu();
 });
 
+
+
+
+
 // Read more recipe feature
 $(".readmore-link").click(function (e) {
   // record if our text is expanded
@@ -63,11 +67,21 @@ var clearAllStorage = document.querySelector("#clear-history");
 generateBtn.addEventListener("click", getRandomMeal);
 generateBtn.addEventListener("click", unhideColumn);
 generateBtn.addEventListener("click", getMovies);
+generateBtn.addEventListener("click", loadIcon);
 saveRecipeBtn.addEventListener("click", saveMeal);
 saveMovieBtn.addEventListener("click", saveMovie);
 favRecipes.addEventListener("click", getRecipeData);
 favMovies.addEventListener("click", getMovieData);
 clearAllStorage.addEventListener("click", clearLocal);
+
+// Loading animation for generate button
+function loadIcon() {
+  $('.button').addClass('button--loading').delay(1000).queue(function( next ){
+    $(this).removeClass('button--loading'); 
+    next();
+  });
+
+}
 
 // Unhide 2nd column content after 2 seconds
 function unhideColumn() {
