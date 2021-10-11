@@ -7,10 +7,6 @@ $(function () {
   $("#releaseperiod").selectmenu();
 });
 
-
-
-
-
 // Read more recipe feature
 $(".readmore-link").click(function (e) {
   // record if our text is expanded
@@ -76,11 +72,13 @@ clearAllStorage.addEventListener("click", clearLocal);
 
 // Loading animation for generate button
 function loadIcon() {
-  $('.button').addClass('button--loading').delay(1000).queue(function( next ){
-    $(this).removeClass('button--loading'); 
-    next();
-  });
-
+  $(".button")
+    .addClass("button--loading")
+    .delay(1000)
+    .queue(function (next) {
+      $(this).removeClass("button--loading");
+      next();
+    });
 }
 
 // Unhide 2nd column content after 2 seconds
@@ -127,7 +125,7 @@ async function getMovies() {
     MaxReleaseDate = "2021-09-09";
     MinReleaseDate = "2011-01-01";
   }
-//Requesting the API to get the number of pages based on filter selections
+  //Requesting the API to get the number of pages based on filter selections
   var pagedata = await fetch(
     "https://api.themoviedb.org/3/discover/movie?api_key=7113d8f1b2a86dd4b4fe2e64488fe988&sort_by=popularity.desc&primary_release_date.gte=" +
       MinReleaseDate +
@@ -141,18 +139,14 @@ async function getMovies() {
   //Randomising a results page and selected result
   var randompage;
   if (pagedata.total_pages === 1) {
-    var randompageint = 1;
+    randompage = 1;
   } else {
-    randompage = Math.floor(Math.random() * (pagedata.total_pages - 1));
+    randompage = Math.floor(Math.random() * pagedata.total_pages);
+    if (randompage === 0 || randompage === -1) {
+      randompage = randompage + 1;
+    }
   }
-  if (pagedata.total_results > 19) {
-    randommovie = Math.floor(Math.random() * (18 + 1));
-  } else {
-    randommovie = Math.floor(Math.random() * pagedata.total_results);
-  }
-  if (randompage === 0 || randompage === -1) {
-    randompage = Math.floor(Math.random() * (pagedata.total_pages - 1));
-  }
+  randommovie = Math.floor(Math.random() * pagedata.results.length);
 
   //Requesting the movie title based on random page, result and filter selections
   movies = await fetch(
@@ -163,9 +157,9 @@ async function getMovies() {
       "&vote_count.gte=5000&with_genres=" +
       selectGenre +
       "&original_language=en-US&page=" +
-      randompageint
+      randompage
   ).then((response) => response.json());
-
+  console.log(movies);
   var movieposter =
     "https://image.tmdb.org/t/p/w500/" +
     movies.results[randommovie].poster_path;
